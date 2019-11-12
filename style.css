@@ -53,10 +53,12 @@ h2 {
 
 h3 {
   color:#0066DD;
+
 }
 
 h4 {
   color:#0066DD;
+  margin: 15px 0px 15px 0px;
 }
 
 /*div containing command texts and button for copying it to clipboard*/
