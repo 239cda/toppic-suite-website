@@ -481,13 +481,16 @@
           <li>Variable PTM list: <pre>C:\toppic_tutorial\tutorial_2\variable_mods.txt</pre></li>
         </ol>
         <h4>Commands</h4>
-        <div class="command-container">
+        <div class="command-container" id="cmd5Container">
+<!--          <span class="copyBtnTooltip" id="cmd5ToolTip">Copied to clipboard</span>-->
           <pre id="cmd5">cd c:\toppic_tutorial\tutorial_2 </pre>
           <button class="copyBtn" onclick="copyToClipboard('cmd5')">Copy</button>
 
         </div>
-        <div class="command-container">
-          <pre id="cmd6">..\toppic\topmg -f C57 -d -t FDR -v 0.05 -T FDR -V 0.05 -i variable_mods.txt uniprot-st.fasta st_1_ms2.msalign</pre><button class="copyBtn" onclick="copyToClipboard('cmd6')">Copy</button>
+        <div class="command-container" id="cmd6Container">
+<!--          <span class="copyBtnTooltip" id="cmd6ToolTip">Copied to clipboard</span>-->
+          <pre id="cmd6">..\toppic\topmg -f C57 -d -t FDR -v 0.05 -T FDR -V 0.05 -i variable_mods.txt uniprot-st.fasta st_1_ms2.msalign</pre>
+          <button class="copyBtn" onclick="copyToClipboard('cmd6')">Copy</button>
         </div>
     </div>
 
@@ -499,15 +502,41 @@
     function copyToClipboard(cmdId){
         const copyText = document.getElementById(cmdId).textContent;
         const textArea = document.createElement('textarea');
+        const tooltip = document.getElementById(cmdId + "ToolTip");
+
         textArea.textContent = copyText;
         document.body.append(textArea);
         textArea.select();
         document.execCommand("copy");
+
+      //show tooltip that shows the text is copied
+        initializeTooltip(cmdId);
+
+        //remove the text area
         removeTextArea(textArea);
 
     }
     function removeTextArea(textArea){//removing the textarea that was created to just for copying purpose
         textArea.remove();
+    }
+
+    function initializeTooltip(cmdId){
+      const tooltip = document.createElement('div');
+
+      document.getElementById(cmdId + "Container").appendChild(tooltip);
+      tooltip.classList.add("copyBtnTooltip");
+      tooltip.textContent = "Copied to clipboard";
+
+      setTimeout(function resetToolTip(){
+        tooltip.style.opacity = "0";
+        tooltip.style.transition = "opacity 1s";
+
+        setTimeout(function removeToolTip(){
+                tooltip.remove();
+        }, 500);
+      }, 200);
+
+
     }
 
 
