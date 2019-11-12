@@ -51,7 +51,7 @@
       <p>Create the folders below for software packages and data sets
         used in this tutorial.
       </p>
-      <ol>
+      <ol class="textList">
         <li>Create a new folder named <code>toppic_tutorial</code> on the <code>C:</code> drive of your system.
         <li>Create a new subfolder named <code>toppic</code> in the folder <code>C:\toppic_tutorial\</code> for
           the software TopPIC suite.
@@ -72,7 +72,7 @@
 
       <h3>3 Software tools</h3>
 
-      <h4>3.1 Msconvert</h4>
+      <h4 class="sectionTitle">3.1 Msconvert</h4>
       <p>
         Msconvert is a software tool in <B>ProteoWizard</B> that converts raw
         files into various spectrum file formats.
@@ -88,17 +88,17 @@
         Follow the steps below to download ProteoWizard:
       </p>
       <p>
-      <ol>
+      <ol class="textList">
         <li>Go to the link  <a href = "http://proteowizard.sourceforge.net/downloads.shtml">ProteoWizard</a>.</li>
         <li>Choose the type 'Windows 64-bit installer' for end users and download ProteoWizard.</li>
         <li>Double click the downloaded file pwiz-setup-3.0-x86-64.msi to install it. </li>
       </ol>
 
-      <h4>3.2 TopPIC suite</h4>
+      <h4 class="sectionTitle">3.2 TopPIC suite</h4>
 
       <h4>3.2.1 Download TopPIC suite</h4>
       <p>
-        <ol>
+        <ol class="textList">
           <li>Go to the <a href = "./register.html">download webpage</a> of TopPIC suite.</li>
           <li>Choose the download type "Windows 64-bit zip file", fill out the
             registration form, and click "I accept license agreement and download
@@ -118,7 +118,7 @@
       <h3>4 Tutorial 1</h3>
       In this tutorial, we will use TopFD and TopPIC to analyze a top-down MS/MS data set of Salmonella typhimurium
       for proteoform identification.
-      <h4>4.1 Top-down MS/MS Date set</h4>
+      <h4 class="sectionTitle">4.1 Top-down MS/MS Date set</h4>
       <p>
         In the MS experiment, the protein extract of S. typhimurium was reduced with dithiothreitol and alkylated with iodoacetamide.
         The protein mixture was first separated by gas-phase fractionation, resulting in 7 fractions.
@@ -129,7 +129,7 @@
       <p>Click <a href="./data_files/tutorial-1-raw.zip">here</a>
         to download the data set, save it in the folder <code>C:\toppic_tutorial\tutorial_1\</code>, and unzip it in the same folder.</p>
 
-      <h4>4.2 Protein sequence database</h4>
+      <h4 class="sectionTitle">4.2 Protein sequence database</h4>
       <p>A S. typhimurium <a href="https://www.uniprot.org/uniprot/?query=proteome:UP000001014%20reviewed:yes">proteome database</a>
         of 1,795 proteins was downloaded from the UniProt database.
       </p>
@@ -144,11 +144,11 @@
            style="border: #00008B 1px solid;"/></p>
       </p>
 
-      <h4>4.3 File format conversion</h4>
+      <h4 class="sectionTitle">4.3 File format conversion</h4>
 
       <p>We use <b>MSConvertGUI</b> to convert the raw files st_1.raw and st_2.raw to mzML
         files.</p>
-      <ol>
+      <ol class="textList">
         <li> Search "msconvert" in the search box on the task bar of Windows 10, and run the desktop app "MSConvert."</li>
         <li> Add the files <code>c:\toppic_tutorial\tutorial_1\st_1.raw</code> and <code>c:\toppic_tutorial\tutorial_1\st_2.raw</code> as input files.</li>
         <li> Add the filter "peakPeaking vendor msLevel=1-" <b><font
@@ -179,10 +179,10 @@
       running time for the file format conversion is less than one minute.
       </p>
 
-      <h4>4.4 Mass spectral deconvolution</h4>
+      <h4 class="sectionTitle">4.4 Mass spectral deconvolution</h4>
 
       <p>We use <b>topfd_gui</b> for top-down mass spectral deconvolution.</p>
-      <ol>
+      <ol class="textList">
         <li> Double click the executable file <code>topfd_gui.exe</code> in the folder
           <code>C:\toppic_tutorial\toppic</code>.</li>
         <li> Add the file <code>c:\toppic_tutorial\tutorial_1\st_1.mzML</code>
@@ -198,7 +198,7 @@
       </p>
 
       TopFD reports six text files.
-      <ol>
+      <ol class="textList">
         <li>Two msalign files containing deconvoluted MS1 spectra:
           <pre>C:\toppic_tutorial\tutorial_1\st_1_ms1.msalign</pre>
           <pre>C:\toppic_tutorial\tutorial_1\st_2_ms1.msalign</pre></li>
@@ -215,13 +215,13 @@
         <!--The running time of TopFD is about 6 minutes. -->
       </p>
 
-      <h4>4.5 Mass spectral identification using TopPIC</h4>
+      <h4 class="sectionTitle">4.5 Mass spectral identification using TopPIC</h4>
       <p>We use <b>toppic_gui</b> to search the MS/MS spectra in
         <code>st_1_ms2.msalign</code> and <code>st_2_ms2.msalign</code>
         against the protein database <code>uniprot-st.fasta</code> to
         identify PrSMs.
       </p>
-      <ol>
+      <ol class="textList">
         <li> Double click the executable file <code>toppic_gui.exe</code> in the folder
           <code>C:\toppic_tutorial\toppic</code>.</li>
         <li> Select <code>C:\toppic_tutorial\tutorial_1\uniprot-st.fasta</code> as the protein
@@ -328,24 +328,24 @@
         <!-- The running time of TopPIC is about 5 minutes. -->
       </p>
 
-      <h4>4.6 Data analysis using the command line interface</h4>
+      <h4 class="sectionTitle">4.6 Data analysis using the command line interface</h4>
 
       <h4>4.6.1 Mass spectral deconvolution</h4>
 
       <p>We use <b>topfd</b> for top-down mass spectral deconvolution.</p>
 
       <h4>File locations</h4>
-      <ol>
+      <ol class="textList">
         <li>Executable file: <pre>C:\toppic_tutorial\toppic\topfd.exe</pre></li>
         <li>Input mzML file: <pre>C:\toppic_tutorial\tutorial_1\st_1.mzML</pre>
           <pre>C:\toppic_tutorial\tutorial_1\st_2.mzML</pre>
         </li>
       </ol>
       <h4>Commands</h4>
-      <div class="command-container">
+      <div class="command-container" id="cmd1Container">
         <pre id="cmd1">cd c:\toppic_tutorial\tutorial_1</pre><button class="copyBtn" onclick="copyToClipboard('cmd1')">Copy</button>
       </div>
-      <div class="command-container">
+      <div class="command-container" id="cmd2Container">
         <pre id="cmd2">..\toppic\topfd st_*.mzML</pre><button class="copyBtn" onclick="copyToClipboard('cmd2')">Copy</button>
       </div>
       <!--
@@ -360,7 +360,7 @@
         against the protein database <code>uniprot-st.fasta</code> to identify PrSMs.
       </p>
       <h4>File locations</h4>
-      <ol>
+      <ol class="textList">
         <li>Executable file: <pre>C:\toppic_tutorial\toppic\toppic.exe</pre></li>
         <li>Input protein database file:
           <pre>C:\toppic_tutorial\tutorial_1\unprot-st.fasta</pre></li>
@@ -372,11 +372,13 @@
         </li>
       </ol>
       <h4>Commands</h4>
-      <div class="command-container">
-        <pre id="cmd3">cd c:\toppic_tutorial\tutorial_1</pre><button class="copyBtn" onclick="copyToClipboard('cmd3')">Copy</button>
+      <div class="command-container" id="cmd3Container">
+        <pre id="cmd3">cd c:\toppic_tutorial\tutorial_1</pre>
+        <button class="copyBtn" onclick="copyToClipboard('cmd3')">Copy</button>
       </div>
-      <div class="command-container">
-        <pre id="cmd4">..\toppic\toppic -f C57 -d -t FDR -T FDR -c combined uniprot-st.fasta st_*_ms2.msalign</pre><button class="copyBtn" onclick="copyToClipboard('cmd4')">Copy</button>
+      <div class="command-container" id="cmd4Container">
+        <pre id="cmd4">..\toppic\toppic -f C57 -d -t FDR -T FDR -c combined uniprot-st.fasta st_*_ms2.msalign</pre>
+        <button class="copyBtn" onclick="copyToClipboard('cmd4')">Copy</button>
       </div>
       <!--
     <p>The screenshot below shows the console output of the above command.</li>
@@ -391,7 +393,7 @@
         <b><font color=#FF0000> TopMG is still in the development stage. Please let us know
           if you find any bugs in it.</font></b>.
       </p>
-      <h4>5.1 Data set and preprocessing </h4>
+      <h4 class="sectionTitle">5.1 Data set and preprocessing </h4>
       The description of the data file and
       its preprocessing steps can be found in Sections 4.1 - 4.4.
       Click
@@ -414,8 +416,8 @@
         </li>
       </ul>
 
-      <h4>5.2 Proteoform identification by TopMG </h4>
-      <ol>
+      <h4 class="sectionTitle">5.2 Proteoform identification by TopMG </h4>
+      <ol class="textList">
         <li> Double click the executable file <code>topmg_gui.exe</code> in the folder
           <code>C:\toppic_tutorial\toppic</code>.</li>
         <li> Select <code>C:\toppic_tutorial\tutorial_2\uniprot-st.fasta</code> as the protein
@@ -476,11 +478,11 @@
         <!-- The running time of TopPIC is about 5 minutes. -->
       </p>
 
-      <h4>5.3 Data analysis using the command line interface</h3>
+      <h4 class="sectionTitle">5.3 Data analysis using the command line interface</h3>
 
 
         <h4>File locations</h4>
-        <ol>
+        <ol class="textList">
           <li>Executable file: <pre>C:\toppic_tutorial\toppic\topmg.exe</pre></li>
           <li>Input protein database file:
             <pre>C:\toppic_tutorial\tutorial_2\unprot-st.fasta</pre></li>
@@ -490,13 +492,11 @@
         </ol>
         <h4>Commands</h4>
         <div class="command-container" id="cmd5Container">
-<!--          <span class="copyBtnTooltip" id="cmd5ToolTip">Copied to clipboard</span>-->
           <pre id="cmd5">cd c:\toppic_tutorial\tutorial_2 </pre>
           <button class="copyBtn" onclick="copyToClipboard('cmd5')">Copy</button>
 
         </div>
         <div class="command-container" id="cmd6Container">
-<!--          <span class="copyBtnTooltip" id="cmd6ToolTip">Copied to clipboard</span>-->
           <pre id="cmd6">..\toppic\topmg -f C57 -d -t FDR -v 0.05 -T FDR -V 0.05 -i variable_mods.txt uniprot-st.fasta st_1_ms2.msalign</pre>
           <button class="copyBtn" onclick="copyToClipboard('cmd6')">Copy</button>
         </div>
@@ -510,7 +510,6 @@
     function copyToClipboard(cmdId){
         const copyText = document.getElementById(cmdId).textContent;
         const textArea = document.createElement('textarea');
-        const tooltip = document.getElementById(cmdId + "ToolTip");
 
         textArea.textContent = copyText;
         document.body.append(textArea);
@@ -543,7 +542,6 @@
                 tooltip.remove();
         }, 500);
       }, 200);
-
     }
 
 

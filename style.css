@@ -101,10 +101,28 @@ h4 {
 }
 
 /*image enlarge on hover*/
-
+/*the commented out part display image on top of original page --> if using modal then use that code*/
+img{
+  /*transition: transform .3s;*/
+  transition: width .6s, height .5s;
+}
 img:hover{
-  width:125%;
-  height:125%;
+  /*-ms-transform: scale(1.5); !* IE 9 *!*/
+  /*-webkit-transform: scale(1.5); !* Safari 3-8 *!*/
+  /*transform: scale(1.5);*/
+  width:130%;
+  height:130%;
+
+}
+
+/*list of texts explaining each step*/
+.textList li{
+  padding: 0px 0px 5px 0px;
+}
+
+/*to differentiate between bigger and smaller section titles in h4 == custom made <h3.5>*/
+.sectionTitle{
+  font-size:20px;
 }
 
 
