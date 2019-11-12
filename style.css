@@ -1,8 +1,8 @@
 <style type="text/css">
-body {
-  padding-top: 20px;
-  padding-bottom: 60px;
-}
+                      body {
+                        padding-top: 20px;
+                        padding-bottom: 60px;
+                      }
 
 /* Custom container */
 .container {
@@ -44,7 +44,7 @@ body {
 }
 
 .code {
-  color: #777;  
+  color: #777;
 }
 
 h2 {
@@ -58,5 +58,26 @@ h3 {
 h4 {
   color:#0066DD;
 }
+
+/*div containing command texts and button for copying it to clipboard*/
+.command-container{
+  position:relative;
+
+}
+/* click to copy button layout */
+.copyBtn{
+  border-radius: 5px;
+  background-color: #0066DD;
+  color: white;
+  opacity:0.8;
+  padding:2px 5px;
+  position:absolute;
+  right:15px;
+  bottom:9px;
+}
+.copyBtn:hover{
+  background-color: #d4d4d4;/* Gray */
+}
+
 
 </style>
