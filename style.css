@@ -102,18 +102,18 @@ h4 {
 
 /*image enlarge on hover*/
 /*the commented out part display image on top of original page --> if using modal then use that code*/
-img{
-  /*transition: transform .3s;*/
-  transition: width .6s, height .5s;
-}
-img:hover{
-  /*-ms-transform: scale(1.5); !* IE 9 *!*/
-  /*-webkit-transform: scale(1.5); !* Safari 3-8 *!*/
-  /*transform: scale(1.5);*/
-  width:110%;
-  height:110%;
+/*img{*/
+  /*!*transition: transform .3s;*!*/
+  /*transition: width .6s, height .5s;*/
+/*}*/
+/*img:hover{*/
+  /*!*-ms-transform: scale(1.5); !* IE 9 *!*!*/
+  /*!*-webkit-transform: scale(1.5); !* Safari 3-8 *!*!*/
+  /*!*transform: scale(1.5);*!*/
+  /*width:110%;*/
+  /*height:110%;*/
 
-}
+/*}*/
 
 /*list of texts explaining each step*/
 .textList li{
